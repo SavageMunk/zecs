@@ -1,0 +1,24 @@
+.{
+    .name = .zecs,
+    .version = "0.1.0",
+    .fingerprint = 0xec068ecdae851caa,
+    .minimum_zig_version = "0.15.0",
+    
+    .dependencies = .{
+        .zsqlite = .{
+            .url = "https://codeload.github.com/SavageMunk/zsqlite/tar.gz/refs/heads/main",
+            .hash = "122013dcc4fbac59093f7505401f2d4f5abba6c0b0d59157f72ce3ced33f4e78517b",
+        },
+    },
+    
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "examples",
+        "benchmarks",
+        "README.md",
+        "FEATURES.md",
+        "INTEGRATION.md",
+    },
+}
