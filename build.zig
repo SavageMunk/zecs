@@ -18,6 +18,10 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
     
+    // Export as Zig module
+    const mod = b.addModule("zecs", .{ .source_file = b.path("src/lib.zig") });
+    b.exportModule("zecs", mod);
+
     // Add zsqlite module to our library
     lib.root_module.addImport("zsqlite", zsqlite_dep.module("zsqlite"));
     lib.linkLibC();
